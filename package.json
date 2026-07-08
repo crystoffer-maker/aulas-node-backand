@@ -1,0 +1,24 @@
+{
+  "name": "aulas-node-backand",
+  "version": "1.0.0",
+  "description": "Aulas do professor Renan mo modulo 2 do curso tecnico de informatica para internet",
+  "homepage": "https://github.com/crystoffer-maker/aulas-node-backand#readme",
+  "bugs": {
+    "url": "https://github.com/crystoffer-maker/aulas-node-backand/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crystoffer-maker/aulas-node-backand.git"
+  },
+  "license": "ISC",
+  "author": "Crystoffer",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
