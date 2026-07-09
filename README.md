@@ -15,3 +15,8 @@ Backend
 *Segurança: A autenticaçao e autorização dos usuarios geralmente ocorrem no backend, garantido que apenas
 usuarios autorizados tenha acesso a determinados recursos.
 *Escalabilidade: O backand precisa ser capaz de lidar com varias requisições  e processa-las de forma 
+
+---
+Aula dia 08/07
+## Require
+    'require' é o sistema de modulos ** nativos do Node.js ** 

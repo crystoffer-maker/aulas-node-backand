@@ -1,38 +1,40 @@
 import express from 'express'
-import bancoDeDados from './repository/index.js'
 
-//server ou app
-// app.get("/api/v1/somar", (req, res) => {
-//     console.log(req.query)
-//     const num1 = Number(req.query.num1)
-//     const num2 = Number(req.query.num2)
-//     const resultado = num1 + num2
-    
-//     res.send({resultado})
-// })
 const app = express()
-//configura uma rota para o metado HTTP GET na raiz ("/") do aplicativo.
-app.get("/", (req, res) => {
-    res.send({message: "Hello World"})
+
+//somar
+app.get("/api/v1/somar", (req, res) => {
+   //const num1 = req.query.num1
+   //const num2 = req.query.num2
+    const { num1, num2 } = req.query
+    const resultado = Number(num1) + Number(num2)
+
+    res.status(200).send({ message: resultado})
+        //res.send({ message: resultado})
 })
-/////////////////////////////////////////
-app.get("/api/pessoal/:id", (req, res) => {
-    const id = req.params.id
+//subtrair
+app.get("/api/v1/sub", (req, res) => {
+    const { num1, num2 } = req.query
+    const resultado = Number(num1) - Number(num2)
 
-    const pessoa = bancoDeDados.find(it => it.id == id)
-
-    res.send({ pessoa })
-})
-app.get("/api/pessoa", (req, res) => {
-const { id, name } = req.query
-
-        bancoDeDados.push({id, name})
-        console.log(bancoDeDados)
-
-        res.send({ message : "pessoa criada com sucesso"})
+    res.status(200).send({ message: resultado })
 })
 
+//mult
+app.get("/api/v1/mult", (req, res) => {
+    const { num1, num2 } = req.query
+    const resultado = Number(num1) * Number(num2)
 
+    res.status(200).send({ message: resultado})
+})
+//div
+app.get("/api/v1/div", (req, res) => {
+    const { num1, num2 } = req.query
+    const resultado = Number(num1) / Number(num2)
+
+    res.status(200).send({ message: resultado})
+    
+})
 app.listen(3000, () => {
     console.log("Servidor escutando na porta 3000")
-})
+ })
