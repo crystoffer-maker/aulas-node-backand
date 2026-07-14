@@ -1,0 +1,15 @@
+$kind: http-request
+name: localhost:3000/api/v1/somar
+description: ""
+url: localhost:3000/api/v1/somar
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"num1\": 10,\r
+
+    \    \"num2\": 20\r
+
+    }"
+order: 3000

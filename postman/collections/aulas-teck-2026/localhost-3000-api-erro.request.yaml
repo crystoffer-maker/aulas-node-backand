@@ -1,0 +1,9 @@
+$kind: http-request
+name: localhost:3000/api/erro
+description: ""
+url: localhost:3000/api/v1/sub?num1=20&num2=70
+method: GET
+queryParams:
+  num1: "20"
+  num2: "70"
+order: 1029

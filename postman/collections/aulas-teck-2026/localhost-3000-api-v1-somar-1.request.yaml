@@ -1,0 +1,24 @@
+$kind: http-request
+name: localhost:3000/api/v1/somar
+description: ""
+url: localhost:3000/api/v1/sub
+method: POST
+queryParams:
+  - key: num1
+    value: "20"
+    disabled: true
+    description: ""
+  - key: num2
+    value: "70"
+    disabled: true
+    description: ""
+body:
+  type: json
+  content: "{\r
+
+    \    \"num1\": 20,\r
+
+    \    \"num2\": 1000\r
+
+    }"
+order: 1000
